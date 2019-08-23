@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+   char a[10],find;
+	printf("enter the string ");
+	gets(a);
+	printf("\nenter the character to search for the number of occurence ");
+	scanf("%c",&find);
+	int i,len=0,count=0;
+	//finding length without using builtin function;
+	for(i=0;a[i];i++,len++);
+	//finding number of occurence of a given char;
+	    for(int k=0;k<len;k++){
+	        if(a[k]==find){
+	            count=count+1;
+	        }
+	    }
+	    printf("occurence of %c is %d ",find,count);
+	return 0;
+}
